@@ -1,0 +1,171 @@
+.root {
+  position: relative;
+  background: linear-gradient(to bottom, #002953 80%, #002d5b 80%);
+  height: 728px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../assets/HeroSectionBackground.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.1;
+  }
+
+  & .header {
+    padding: 16px 80px;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    z-index: 1;
+
+    & .header-logo {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+
+      & .logo {
+        display: flex;
+        gap: 14px;
+      }
+
+      & .routes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        & .links {
+          text-decoration: none;
+          color: #fff;
+        }
+
+        & .resources {
+          display: flex;
+          justify-content: center;
+
+          align-items: center;
+          cursor: pointer;
+          gap: 5px;
+          position: relative;
+
+          & .popover {
+            background-color: #fff;
+            width: 400px;
+            min-height: 100px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            top: 40px;
+            opacity: 0;
+            left: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            pointer-events: none;
+            border-radius: 8px;
+            padding: 24px 20px;
+
+            & .icon-txt {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              color: #101828;
+              gap: 16px;
+
+              & .txt {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                margin-top: -2px;
+              }
+            }
+
+            &:hover {
+              opacity: 1;
+              transform: translateY(0);
+              pointer-events: auto;
+            }
+          }
+          &:hover .popover {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+  }
+
+  & .search-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .close {
+      position: absolute;
+      top: 118px;
+      right: 420px;
+    }
+
+    & .search {
+      width: 640px;
+      height: 56px;
+      background-color: #fff;
+      border-radius: 12px;
+      left: 350px;
+      top: 137px;
+      position: absolute;
+
+      & .input {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        border: 1px solid #fff;
+        padding-left: 45px;
+        color: #62696f;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      & .search-btn {
+        position: absolute;
+        color: #62696f;
+        font-size: 20px;
+        top: 19px;
+        left: 19px;
+      }
+    }
+  }
+
+  & .slogan {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-top: 152px;
+
+    & .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ffe500;
+      border-radius: 8px;
+      padding: 16px 28px 16px 28px;
+    }
+  }
+}
